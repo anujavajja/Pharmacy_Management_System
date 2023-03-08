@@ -1,0 +1,141 @@
+<div class="Container" style="color:whitesmoke; background-color: #80eddd; padding: 5px;">
+  <div class="row">
+    <div class="col-md-10">
+      <h1 style="text-align: center;  color: black; margin-left: 30px;">REGISTER PAGE</h1>
+    </div>
+    <div class="col-md-2">
+      <button type="button" [routerLink]="['/home']" style="padding: 5px; width:80px; margin: 10px;"
+        class="btn btn-primary">Back</button>
+     
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container">
+  <div class="row content">
+    <div class="col-md-6 mb-3">
+      <img src="assets/images/HOME.jpg" class="img-fluid" alt="">
+    </div>
+    </div>
+    </div> -->
+    <div class="outer">
+      <div class="container">
+          <div class="row">
+          <div class="offset-lf-2 col-lg-5 col-lf-5  offset-lf-3">
+              <div class="panel border bg-white">
+              <div class="panel-heading">
+                  <h3 class="pt-3 font-weight-bold" style="color:blue">REGISTER HERE</h3>
+              </div>
+              <div class="panel-body p-3">
+      
+      <form class="col  white" #userRegistrationForm="ngForm">
+        <div class="form-group pt-3">
+          <label data-error="Required field!">Doctor Name</label>
+          <div class="input-field">
+          <input type="text" name="DoctorName" class="form-control" #name="ngModel" [(ngModel)]="doctor.DoctorName"
+            required minlength="5"></div>
+          <div *ngIf="!name?.valid && (name?.dirty || name?.touched)" class="error">
+            <div class="text-danger" *ngIf="name.errors?.required ">
+              Name is required
+            </div>
+            <div class="text-danger" *ngIf="name.errors?.minlength">
+              Doctor Name Minimum Length is {{name.errors?.minlength?.requiredLength}}
+            </div>
+          </div>
+          <br>
+
+
+          <label>Doctor Id</label>
+          <div class="input-field">
+          <input type="text" name="DoctorId" class="form-control" #doctorid="ngModel" [(ngModel)]="doctor.DoctorId"
+            required></div>
+          <span class="text-danger"
+            *ngIf="(doctorid.touched || userRegistrationForm.submitted) && doctorid.errors?.required">
+            doctorId is required
+          </span>
+
+          <br>
+
+
+          <label for="email">Email Address</label>
+          <input type="email" name="EmailId" class="form-control" #EmailId="ngModel" [(ngModel)]="doctor.EmailId"
+            required>
+          <span class="text-danger"
+            *ngIf="(EmailId.touched || userRegistrationForm.submitted) && EmailId.errors?.required">
+            Email is required
+          </span>
+          <span class="text-danger" *ngIf="EmailId.touched && EmailId.errors?.EmailId">
+            Enter a valid email address
+          </span>
+          <br>
+
+
+
+          <label>Contact</label>
+          <div class="input-field">
+          <input type="text" name="Contact" class="form-control" #contact="ngModel" [(ngModel)]="doctor.Contact"
+            required minlength="10" required maxlength="10"></div>
+          <span class="text-danger"
+            *ngIf="(contact.touched || userRegistrationForm.submitted) && contact.errors?.minlength">
+            minlength 10 is required
+          </span>
+          <span class="text-danger"
+            *ngIf="(contact.touched || userRegistrationForm.submitted) && contact.errors?.required">
+            Enter a valid Contact
+          </span>
+          <br>
+
+
+          <label>Address</label>
+          <div class="input-field">
+          <input type="text" name="Address" class="form-control" #address="ngModel" [(ngModel)]="doctor.Address"
+            required></div>
+          <span class="text-danger"
+            *ngIf="(address.touched || userRegistrationForm.submitted) && address.errors?.required">
+            Enter a valid address
+          </span>
+          <br>
+
+
+          <label for="password">Password</label>
+          <div class="input-field">
+          <input type="password" name="Password" class="form-control" #password="ngModel" [(ngModel)]="doctor.Password"
+            required required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$"></div>
+          <span class="text-danger"
+            *ngIf="(password.touched || userRegistrationForm.submitted) && password.errors?.required">
+            Password is required
+          </span>
+          <span class="text-danger" *ngIf="password.touched && password.errors?.pattern">
+            Password should be atleast 8 characters
+            long and should contain one number,one character and one special
+            character
+          </span>
+
+
+        </div>
+        <br>
+        <div class="row">
+          <div class="input-field col s12">
+            <button class="btn-large btn-submit" [disabled]="!userRegistrationForm.valid" type="submit"
+              (click)="OnSubmit(userRegistrationForm)">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="Container" id="footer"
+    style="color:rgb(0, 0, 0); text-align: center;  background-color: #7fe7b3; padding: 4px;">
+    <footer>
+      <span>
+        <strong>
+          Pharmacy Management System        
+        </strong>
+      </span>
+    </footer>
+  </div>
+
+
+
+
+

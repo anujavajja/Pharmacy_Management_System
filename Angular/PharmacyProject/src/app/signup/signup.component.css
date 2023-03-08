@@ -1,0 +1,117 @@
+.outer{
+    height: 1000px;
+    background:linear-gradient(to top, #5f5fdc 100%,#6e6ef6 200%)no-repeat;
+    background-image: url("src\assets\images\Register.jpg");
+    background-size: cover;
+}
+.panel-heading{
+    text-align:center;
+    margin-bottom:10px;
+}
+#forget{
+    min-width:100px;
+    margin-left: auto;
+    text-decoration:none;
+    cursor:pointer;
+}
+a:hover{
+    text-decoration:none;
+}
+.form-inline label{
+    padding-left:10px;
+    margin:();
+    cursor:pointer;
+}
+.btn{
+    margin-top: 20px;
+    border-radius:15px;
+}
+.panel{
+    min-height :300px;
+    box-shadow:20px 20px 80px rgb(218,218,218);
+    border-radius:12px;
+    margin-top:50px;
+}
+.input-field{
+    border-radius:5px;
+    padding:5px;
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+    border:1px solid #ddd;
+    color:#6e6ef6;
+}
+.input-field.error{
+    border:1px solid red;
+    color:red;
+}
+input[type='text'],
+input[type='password']{
+    border:none;
+    outline:none;
+    box-shadow:none;
+    width:100%;
+}
+.fa-eye-slash.btn{
+    border:none;
+    outline:none;
+    box-shadow:none;
+}
+img{
+    width:40px;
+    height:40px;
+    object-fit:cover;
+    border-radius:50%;
+    position:relative;
+}
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
+
+/* body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #00ac96;
+} */
+
+/* .content {
+    margin: 2%;
+    background-color: #fff;
+    padding: 4rem 1rem 4rem 1rem;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+Login-text {
+    font-style: normal;
+    font-weight: 900;
+}
+
+.form-control {
+    display: block;
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border-color: #00ac96;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    padding: 0px;
+    height: auto;
+    border-radius: 0;
+    background-color: #fff;
+    background-clip: padding-box;
+} */
+
+/* .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #fff;
+    outline: 0;
+    box-shadow: none;
+} */
+
+/* .btn-class {
+    border-color: #00ac96;
+    color: #00ac96;
+}
+
+.btn-class:hover {
+    background-color: #00ac96;
+} */

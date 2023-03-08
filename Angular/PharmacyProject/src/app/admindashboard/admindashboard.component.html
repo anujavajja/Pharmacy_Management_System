@@ -1,0 +1,69 @@
+<header class="navbar navbar-dark sticky-top bg-primary flex-md-nowrap p-0 shadow">
+  <div class="col-md-10">
+    <h1 style="text-align: center;  color: black; margin-left: 30px;"> Admin Dashboard</h1>
+  </div>
+  <div class="col-md-2">
+    <button type="button" [routerLink]="['/sales']" style="padding: 5px; width:80px; margin: 1px;"
+      class="btn btn-primary">Sales</button>
+    <button type="button" [routerLink]="['/login']" style="padding: 5px; width:80px; margin: 10px;"
+      class="btn btn-primary" (click)="LogOut()">Logout</button>
+   </div>
+ 
+</header>
+
+<div class="outer">
+  <div class="container">
+      <div class="row">
+        <div class="offset-lf-2 col-lg-4 col-lf-7 offset-lf-4 offset-lf-3">
+          <div class="panel border bg-white">
+          <div class="panel-heading">
+            <h1>01</h1><br>
+              <h1 class="pt-3 font-weight-bold" style="color:blueviolet">Supplier Details</h1><br><br>
+              <h4><p>select the operation to <br>make changes</p></h4><br><br>
+             <button type="button" [routerLink]="['/supplier']" class="btn btn-primary">Details</button> 
+          </div>
+          </div>
+      </div>
+      <div class="offset-lf-2 col-lg-4 col-lf-7 offset-lf-4 offset-lf-3">
+        <div class="panel border bg-white">
+        <div class="panel-heading">
+          <h1>02</h1><br>
+            <h1 class="pt-3 font-weight-bold" style="color:blueviolet">Drug Details</h1><br><br>
+            <h4><p>select the operation to <br>make changes</p></h4><br><br>
+
+            <button type="button" [routerLink]="['/admindrug']" class="btn btn-primary">Details</button>
+        </div>
+        </div>
+    </div>
+    <div class="offset-lf-2 col-lg-4 col-lf-7 offset-lf-4 offset-lf-5">
+      <div class="panel border bg-white">
+      <div class="panel-heading">
+        <h2>03</h2><br>
+          <h1 class="pt-3 font-weight-bold" style="color:blueviolet">Orders Details</h1><br><br>
+          <h4><p>select the operation to <br>make changes</p></h4><br><br>
+          <button type="button" [routerLink]="['/adminorders']" class="btn btn-primary">Details</button>
+      </div>
+      </div>
+  </div>
+      </div>
+      </div>
+     
+</div>
+
+
+
+
+
+
+  <!-- <div class="Container" id="footer"
+    style="color:rgb(0, 0, 0); text-align: center;  background-color: #0bc1f9; padding: 10px;">
+    <footer>
+      <span>
+        <strong>
+          Pharmacy Management System -
+          Contact : vtu14218@velteh.edu.in
+        </strong>
+      </span>
+    </footer>
+  </div>
+</div> -->
